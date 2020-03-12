@@ -65,6 +65,7 @@ def signup():
         # verification email message
         subject = "Verify your email address"
         domain = "{}.herokuapp.com".format(os.getenv("HEROKU_APP_NAME"))  # TODO: set HEROKU_APP_NAME config var on Heroku!
+        print("Domain: " + str(domain))
         text = "Hi! Click on this link to verify your email address: {0}/verify-email/{1}".format(domain, user.verification_token)
 
         # send verification email
